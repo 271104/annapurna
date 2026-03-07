@@ -35,14 +35,14 @@ const Navbar = () => {
     <motion.nav
       className={`fixed w-full z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-black/95 backdrop-blur-md shadow-lg py-2 md:py-2.5'
-          : 'bg-black/90 backdrop-blur-sm py-2.5 md:py-3'
+          ? 'bg-black/95 backdrop-blur-md shadow-lg py-1.5 md:py-2'
+          : 'bg-black/90 backdrop-blur-sm py-2 md:py-2.5'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container-custom px-4 sm:px-6">
+      <div className="container-custom px-4 sm:px-6 w-full">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
@@ -53,11 +53,11 @@ const Navbar = () => {
             <img 
               src={LOGO_URL}
               alt={BUSINESS_INFO.name}
-              className="w-20 h-20 md:w-24 md:h-20 object-contain relative z-10"
-              style={{ marginTop: '-8px', marginBottom: '-8px' }}
+              className="w-16 h-16 md:w-20 md:h-20 object-contain relative z-10"
+              style={{ marginTop: '-6px', marginBottom: '-6px' }}
               onError={(e) => {
                 // Fallback to letter logo if image fails to load
-                e.target.outerHTML = '<div class="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-saffron to-gold rounded-full flex items-center justify-center shadow-lg relative z-10" style="margin-top: -8px; margin-bottom: -8px;"><span class="text-white font-bold text-2xl md:text-3xl">A</span></div>';
+                e.target.outerHTML = '<div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-saffron to-gold rounded-full flex items-center justify-center shadow-lg relative z-10" style="margin-top: -6px; margin-bottom: -6px;"><span class="text-white font-bold text-xl md:text-2xl">A</span></div>';
               }}
             />
             <div>

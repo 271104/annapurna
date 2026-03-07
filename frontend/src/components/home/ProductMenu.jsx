@@ -51,28 +51,28 @@ const ProductMenu = () => {
   };
 
   return (
-    <section id="menu" className="section-padding pattern-bg">
-      <div className="container-custom px-4 sm:px-6">
+    <section id="menu" className="section-padding pattern-bg overflow-hidden w-full">
+      <div className="container-custom w-full">
         <AnimatedSection variant="fadeIn" className="text-center mb-8 md:mb-12">
           <motion.span className="inline-block text-saffron font-semibold mb-2 text-sm md:text-base">
             Our Menu
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 px-4">
             Delicious <span className="gradient-text">Sweet Collection</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-6 md:px-4">
             Explore our wide range of traditional and modern Indian sweets, all made fresh daily
           </p>
         </AnimatedSection>
 
         {/* Category Filter */}
-        <AnimatedSection variant="slideUp" className="mb-8 md:mb-12">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-2">
+        <AnimatedSection variant="slideUp" className="mb-8 md:mb-12 overflow-x-auto">
+          <div className="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-2 md:gap-3 px-4 pb-2 md:pb-0 min-w-max md:min-w-0">
             {CATEGORIES.map((category) => (
               <motion.button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-3 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all text-xs sm:text-sm md:text-base ${
+                className={`px-4 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all text-xs sm:text-sm md:text-base whitespace-nowrap flex-shrink-0 ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-saffron to-gold text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50'

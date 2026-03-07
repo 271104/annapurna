@@ -47,8 +47,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white">
-      <div className="container-custom">
+    <section id="contact" className="section-padding bg-white w-full">
+      <div className="container-custom w-full">
         <AnimatedSection variant="fadeIn" className="text-center mb-12">
           <motion.span className="inline-block text-saffron font-semibold mb-2">
             Contact Us

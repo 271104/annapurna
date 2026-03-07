@@ -27,9 +27,15 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,21 +130,22 @@ html {
 
 /* Button Styles */
 .btn-primary {
-  @apply bg-gradient-to-r from-saffron to-gold text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-105;
+  @apply bg-gradient-to-r from-saffron to-gold text-white font-semibold py-2.5 px-6 md:py-3 md:px-8 rounded-full shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-105 text-sm md:text-base;
 }
 
 .btn-secondary {
-  @apply bg-white text-saffron font-semibold py-3 px-8 rounded-full border-2 border-saffron hover:bg-saffron hover:text-white transition-all duration-300;
+  @apply bg-white text-saffron font-semibold py-2.5 px-6 md:py-3 md:px-8 rounded-full border-2 border-saffron hover:bg-saffron hover:text-white transition-all duration-300 text-sm md:text-base;
 }
 
 /* Section Padding */
+/* Section Padding */
 .section-padding {
-  @apply py-16 md:py-24;
+  @apply py-12 md:py-16 lg:py-24;
 }
 
 /* Container */
 .container-custom {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
 }
 
 /* Gradient Text */
@@ -158,10 +165,46 @@ html {
 /* Responsive Typography */
 @media (max-width: 640px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.875rem;
+    line-height: 1.2;
   }
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Prevent horizontal scroll - CRITICAL */
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+  }
+  
+  body * {
+    max-width: 100%;
+  }
+  
+  /* Better touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Reduce padding on mobile */
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  /* Better spacing */
+  .container-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 }
 

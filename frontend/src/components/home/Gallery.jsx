@@ -6,21 +6,21 @@ const Gallery = () => {
   const images = GALLERY_IMAGES;
 
   return (
-    <section id="gallery" className="section-padding bg-white">
-      <div className="container-custom px-4 sm:px-6">
+    <section id="gallery" className="section-padding bg-white overflow-hidden w-full">
+      <div className="container-custom w-full">
         <AnimatedSection variant="fadeIn" className="text-center mb-8 md:mb-12">
           <motion.span className="inline-block text-saffron font-semibold mb-2 text-sm md:text-base">
             Gallery
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 px-4">
             Sweet <span className="gradient-text">Moments</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-6 md:px-4">
             A glimpse of our delicious creations and happy customers
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 px-4 md:px-0">
           {images.map((image, index) => (
             <AnimatedSection key={index} variant="scaleIn">
               <motion.div
