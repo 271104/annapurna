@@ -1,0 +1,346 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF9933;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CC7A29;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-saffron via-gold to-saffron bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .shadow-premium {
+    box-shadow: 0 10px 40px rgba(255, 153, 51, 0.15);
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+}
+
+/* Loading Animation */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(255, 153, 51, 0.1);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer Effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Product Card Hover Effect */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-saffron to-gold text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-white text-saffron font-semibold py-3 px-8 rounded-full border-2 border-saffron hover:bg-saffron hover:text-white transition-all duration-300;
+}
+
+/* Section Padding */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+/* Container */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF9933 0%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pattern Background */
+.pattern-bg {
+  background-color: #FFF8DC;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF9933' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile Touch Interactions */
+@media (hover: none) and (pointer: coarse) {
+  /* Enable hover effects on touch devices via active state */
+  .hover-lift:active {
+    transform: translateY(-8px);
+  }
+  
+  .product-card:active {
+    transform: translateY(-8px) scale(1.02);
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+  
+  .btn-secondary:active {
+    transform: scale(0.95);
+  }
+  
+  /* Make cards show hover state on tap */
+  .glass-card:active {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(255, 153, 51, 0.2);
+  }
+  
+  /* Gallery image hover effect on tap */
+  .gallery-item:active img {
+    transform: scale(1.1);
+  }
+  
+  .gallery-item:active .gallery-overlay {
+    opacity: 1;
+  }
+}
+
+/* Enable hover effects for all devices */
+@media (hover: hover) and (pointer: fine) {
+  /* Desktop hover effects */
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(255, 153, 51, 0.2);
+  }
+}
+
+/* Smooth animations on mobile */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Optimize animations for mobile performance */
+@media (max-width: 768px) {
+  .animate-float {
+    animation-duration: 4s; /* Slower on mobile for better performance */
+  }
+  
+  /* Reduce blur on mobile for better performance */
+  .glass-card {
+    backdrop-filter: blur(8px);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(8px);
+  }
+  
+  /* Input focus effects on mobile */
+  input:focus, textarea:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.2);
+  }
+  
+  /* Button press feedback */
+  button:active, a:active {
+    transform: scale(0.95);
+  }
+  
+  /* Card tap feedback */
+  .glass-card:active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 153, 51, 0.15);
+  }
+}
+
+/* Touch-friendly tap highlights */
+* {
+  -webkit-tap-highlight-color: rgba(255, 153, 51, 0.2);
+}
+
+/* Ripple effect for mobile taps */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.tap-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.tap-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 153, 51, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+}
+
+.tap-ripple:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+/* Add ripple to buttons and cards */
+.btn-primary, .btn-secondary, .product-card, .glass-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Prevent text selection on interactive elements */
+button, a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, .product-card, .glass-card {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Mobile-specific hover effects via long press */
+@media (hover: none) and (pointer: coarse) {
+  /* Simulate hover on long press */
+  .product-card:active {
+    animation: pulse 0.3s ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+  
+  /* Category buttons tap effect */
+  button:active {
+    transform: scale(0.95);
+    background-color: rgba(255, 153, 51, 0.9);
+  }
+  
+  /* Navigation items tap effect */
+  nav button:active {
+    color: #FFD700;
+  }
+}

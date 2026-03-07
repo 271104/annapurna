@@ -1,0 +1,59 @@
+========================================
+HOW TO ADD YOUR IMAGES
+========================================
+
+STEP 1: Find This Folder
+-------------------------
+You are here: frontend/public/images/
+
+STEP 2: Copy Your Images Here
+------------------------------
+Drag and drop your images into this folder
+OR
+Right-click → Copy → Paste your images here
+
+STEP 3: Rename Your Images
+---------------------------
+Required:
+- logo.jpg (or logo.png) - Your business logo
+- shop-front.jpg - Your shop photo
+
+Optional:
+- gallery-1.jpg - Gallery photo 1
+- gallery-2.jpg - Gallery photo 2
+- gallery-3.jpg - Gallery photo 3
+- gallery-4.jpg - Gallery photo 4
+- gallery-5.jpg - Gallery photo 5
+
+STEP 4: Refresh Browser
+------------------------
+Press: Ctrl+R or F5
+
+Done! Your images will appear on the website!
+
+========================================
+TIPS
+========================================
+
+✓ Use lowercase file names (logo.jpg not Logo.JPG)
+✓ Use hyphens not spaces (shop-front.jpg not shop front.jpg)
+✓ Supported formats: .jpg, .png, .webp, .gif
+✓ Recommended sizes:
+  - Logo: 200x200px
+  - Shop Front: 1920x1080px
+  - Gallery: 800x800px
+
+========================================
+EXAMPLE
+========================================
+
+Your folder should look like:
+
+frontend/public/images/
+├── logo.jpg          ← Your logo
+├── shop-front.jpg    ← Your shop photo
+├── gallery-1.jpg     ← Gallery photo 1
+├── gallery-2.jpg     ← Gallery photo 2
+└── gallery-3.jpg     ← Gallery photo 3
+
+========================================
