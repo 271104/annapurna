@@ -6,8 +6,12 @@ import Hero from '../components/home/Hero';
 import Loader from '../components/common/Loader';
 
 // Lazy load components for better performance
+const LegacyStory = lazy(() => import('../components/home/LegacyStory'));
+const FamilyConnection = lazy(() => import('../components/home/FamilyConnection'));
 const About = lazy(() => import('../components/home/About'));
 const ProductMenu = lazy(() => import('../components/home/ProductMenu'));
+const BulkOrders = lazy(() => import('../components/home/BulkOrders'));
+const TrustBadges = lazy(() => import('../components/home/TrustBadges'));
 const Gallery = lazy(() => import('../components/home/Gallery'));
 const Testimonials = lazy(() => import('../components/home/Testimonials'));
 const Contact = lazy(() => import('../components/home/Contact'));
@@ -18,8 +22,12 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Suspense fallback={<Loader />}>
+        <LegacyStory />
+        <FamilyConnection />
         <About />
         <ProductMenu />
+        <BulkOrders />
+        <TrustBadges />
         <Gallery />
         <Testimonials />
         <Contact />

@@ -85,7 +85,7 @@ const Hero = () => {
             >
               <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full animate-pulse" />
               <span className="text-xs md:text-sm font-medium text-gray-700">
-                Fresh & Premium Quality
+                🏆 Solapur's Trusted Since 2004
               </span>
             </motion.div>
 
@@ -114,8 +114,8 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              Premium Traditional Indian Sweets & Mithai. 
-              Fresh, Authentic & Delicious. Made with Love & Pure Ingredients.
+              <span className="font-semibold text-saffron">सोलापूरची आवडती मिठाई दुकान</span> - 20+ Years of Trust, Tradition & Pure Sweetness. 
+              आपल्या प्रत्येक सणाचा, लग्नाचा आणि आनंदाचा भाग.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -153,9 +153,9 @@ const Hero = () => {
               transition={{ delay: 1.4 }}
             >
               {[
-                { number: '100%', label: 'Pure & Fresh' },
-                { number: '50+', label: 'Sweet Varieties' },
-                { number: '5★', label: 'Customer Rating' },
+                { number: '20+', label: 'Years Legacy' },
+                { number: '50K+', label: 'Happy Families' },
+                { number: '4.9★', label: 'Customer Rating' },
               ].map((stat, index) => (
                 <motion.div
                   key={index}

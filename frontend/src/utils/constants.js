@@ -7,9 +7,12 @@ export const BUSINESS_INFO = {
   address: import.meta.env.VITE_BUSINESS_ADDRESS || "ITI Chowk, Shop no. 6, Vijapur Rd, Medical Society, Ashok Nagar, Solapur, Maharashtra 413004",
   whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '919421008444',
   mapsEmbed: import.meta.env.VITE_GOOGLE_MAPS_EMBED || 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.2535991095683!2d75.90219437522549!3d17.638143995532808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5da06bd91d5c1%3A0x24fa4613f5b2d9d!2sDevasi.s%20Annapurna%20misthan%20bhandar!5e0!3m2!1sen!2sin!4v1772861870338!5m2!1sen!2sin',
-  hours: 'Open Daily • Closes 10:30 PM',
-  tagline: 'Sweetness in Every Bite',
-  description: 'Experience the authentic taste of traditional Indian sweets made with premium ingredients and time-honored recipes.',
+  hours: 'Open Daily • 8 AM - 10:30 PM',
+  tagline: 'सोलापूरची आवडती मिठाई दुकान - 20+ Years of Pure Sweetness',
+  description: 'Best sweet shop in Solapur since 2004. Traditional Indian sweets, mithai, and namkeen made fresh daily with pure ingredients. Trusted by 50,000+ families for weddings, festivals & celebrations.',
+  city: 'Solapur',
+  state: 'Maharashtra',
+  established: '2004',
 };
 
 export const CATEGORIES = [
